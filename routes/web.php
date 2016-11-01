@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('<h1>Primeira lógica com Laravel</h1>');
 });
 
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra') ->where('id', '[0-9]+');
+
 Route::get('/produtos', 'ProdutoController@lista');
+
+Route::get('/produtos/novo', 'ProdutoController@novo');
+
+Route::get('/produtos/adiciona', 'ProdutoController@adiciona');
