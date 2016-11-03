@@ -1,3 +1,9 @@
+# Aplicativo Web Para Gerenciar Estoque (Laboratório de Laravel)
+
+Aplicativo desenvolvido como laboratório do Livro: PHP e Laravel da Casa do Código.
+
+Pequena aplicação web desenvolvida em PHP, Laravel e Mysql como aprendizagem.
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

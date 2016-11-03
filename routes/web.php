@@ -19,6 +19,14 @@ Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra') ->where('id', '[
 
 Route::get('/produtos', 'ProdutoController@lista');
 
+Route::get('/produtos/json', 'ProdutoController@listaJson');
+
+Route::put('/produtos/remove/{id}', 'ProdutoController@remove');
+
+Route::get('/produtos/editar/{id}', 'ProdutoController@editar');
+
+Route::get('/produtos/update', 'ProdutoController@update');
+
 Route::get('/produtos/novo', 'ProdutoController@novo');
 
-Route::get('/produtos/adiciona', 'ProdutoController@adiciona');
+Route::post('/produtos/adiciona', 'ProdutoController@adiciona');

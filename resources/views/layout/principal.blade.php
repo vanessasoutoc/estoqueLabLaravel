@@ -1,7 +1,8 @@
 <html>
 	<head>
-		<link href="/css/app.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/custom.css" rel="stylesheet">
+
 		<title>Controle de estoque</title>
 	</head>
 	<body>
@@ -29,6 +30,6 @@
 				<p>© Livro de Laravel da Casa do Código.</p>
 			</footer>
 		</div>
-
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</body>
 </html>
