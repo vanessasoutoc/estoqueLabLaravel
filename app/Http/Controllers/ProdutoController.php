@@ -1,12 +1,20 @@
 <?php namespace estoque\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use estoque\Produto;
+
 use Request;
+use estoque\Http\Requests\ProdutosRequest;
 /**
 * 
 */
 class ProdutoController extends Controller {
+	
+	public function __construct(){
+		$this->middleware('auth', 
+						 ['only' => ['adiciona', 'remove']]);
+	}
 
 	public function lista(){
 
@@ -44,7 +52,7 @@ class ProdutoController extends Controller {
 		return view('produto.formulario');
 	}
 
-	public function adiciona(){
+	public function adiciona(ProdutosRequest $request){
 		/*$nome = Request::input('nome');
 		$descricao = Request::input('descricao');
 		$valor = Request::input('valor');
@@ -55,7 +63,7 @@ class ProdutoController extends Controller {
 
 		return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));*/
 
-		Produto::create(Request::all());
+		Produto::create($request->all());
 
 		return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
 
@@ -75,6 +83,7 @@ class ProdutoController extends Controller {
 		$produto->delete();
 
 		return redirect()->action('ProdutoController@lista');
+		#return redirect('produtos');
 	}
 
 	public function editar($id){
